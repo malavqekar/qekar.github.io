@@ -1,4 +1,4 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,29 +9,60 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    margin: 0;
+    background-color: #f9f9f9;
 }
 
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background: #1a1f36;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5a5f;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: #ff5a5f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
 /* Hero Section */
 .hero {
-    background: #1a1f36;
-    color: #fff;
     text-align: center;
     padding: 5rem 1rem;
+    background: #1a1f36;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
 .cta-buttons a {
-    display: inline-block;
     margin: 0.5rem;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -39,31 +70,140 @@ body {
     border-radius: 5px;
 }
 
-.btn-primary {
+.cta-buttons .btn-primary {
     background: #ff5a5f;
-    color: #fff;
+    color: white;
 }
 
-.btn-secondary {
+.cta-buttons .btn-secondary {
+    border: 2px solid white;
+    color: white;
     background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
 }
 
-.section {
+/* Section Titles */
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Benefits Section */
+.benefits {
     padding: 3rem 1rem;
-    text-align: center;
+    background: white;
 }
 
-.benefits-grid, .use-cases-grid, .pricing-grid {
-    display: flex;
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    justify-content: center;
 }
 
-footer {
-    background: #333;
-    color: #fff;
+.benefits-grid .benefit h3 {
+    font-size: 1.5rem;
+    color: #ff5a5f;
+}
+
+/* Use Cases Section */
+.use-cases {
+    padding: 3rem 1rem;
+    background: #f3f3f3;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 1rem;
+    background: white;
+}
+
+.features ul {
+    list-style-type: none;
+}
+
+.features li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 3rem 1rem;
+    background: #f3f3f3;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pricing-card {
     text-align: center;
-    padding: 1rem 0;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.pricing-card p {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.pricing-card a {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: #ff5a5f;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Waitlist Section */
+.waitlist {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #1a1f36;
+    color: white;
+}
+
+.waitlist form {
+    margin-top: 1rem;
+}
+
+.waitlist input {
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.waitlist button {
+    padding: 0.75rem 1.5rem;
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    font-size: 0.875rem;
 }
