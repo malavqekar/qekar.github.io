@@ -1,73 +1,138 @@
 /* 
-========================
-    GLOBAL STYLES
-========================
+  GLOBAL RESETS & VARIABLES
 */
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* 
-  Use the "Inter" font (or your preferred font).
-  Fallbacks are sans-serif for browsers that don't support Inter.
-*/
+html {
+  /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Inter", sans-serif;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  color: #1E2A38; /* Dark blue text color */
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* You can use a neutral background color or white. */
-  background-color: #ffffff;
+}
+
+/* 
+  Primary brand color: #1E2A38 (Dark Blue)
+  Accent color for buttons: #FF5733 (Orange) 
+  Secondary brand color or background highlights can be lighter shades of gray or blue 
+*/
+
+/* 
+  COMMON UTILITY CLASSES & STYLES 
+*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings for each major section */
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  color: #1E2A38;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  font-size: 1rem;
+  color: #555; 
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* 
+  Primary (orange) button 
+*/
+.primary-btn {
+  background-color: #FF5733;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background-color: #e64e2e;
+}
+
+/* 
+  Secondary (outline or inverse) button 
+*/
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #FF5733;
+  color: #FF5733;
+}
+
+.secondary-btn:hover {
+  background-color: #FF5733;
+  color: #ffffff;
 }
 
 /* 
 ========================
-    NAVIGATION
+    NAVBAR STYLES
 ========================
 */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
-nav {
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #fff;          /* Nav background color */
-  border-bottom: 1px solid #ddd;   /* Subtle bottom border for separation */
+  height: 60px;
 }
 
-/* 
-  The brand logo text styling. You can replace 
-  this text with an <img> logo as needed.
-*/
-nav .logo {
+.logo {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: #3c0d99; /* Example brand color */
-  text-decoration: none;
+  color: #1E2A38;
 }
 
-/*
-  Navigation link container. 
-  Left margin for each link for spacing.
-*/
-nav .nav-links a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #666;   /* Navigation link color */
-  font-weight: 600;
-  transition: color 0.2s ease-in-out;
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
-/*
-  Navigation link hover states. 
-  Adjust the color for your brand.
-*/
-nav .nav-links a:hover {
-  color: #3c0d99; 
+.nav-links a {
+  color: #1E2A38;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #FF5733;
 }
 
 /* 
@@ -75,252 +140,292 @@ nav .nav-links a:hover {
     HERO SECTION
 ========================
 */
-
-/*
-  A centered hero section with a background color 
-  or image. Adjust padding for space.
-*/
 .hero {
+  background: linear-gradient(135deg, #1E2A38 60%, #27394F);
+  color: #ffffff;
+  padding: 4rem 2rem;
   text-align: center;
-  padding: 3rem 2rem;
-  background-color: #f6f5fa; /* Light brand background color */
 }
 
-/* Main hero heading */
-.hero h1 {
-  font-size: 2.5rem;    /* Large, attention-grabbing size */
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #2d2d2d;       /* Dark text color for contrast */
+  line-height: 1.2;
 }
 
-/* Hero paragraph or subtitle */
-.hero p {
+.hero-subtitle {
   font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;  /* Center text with auto margins */
-  line-height: 1.5;          /* Improve readability */
-  color: #555;               /* Slightly softer text color */
+  margin-bottom: 2rem;
+  color: #f0f0f0;
 }
 
-/*
-  A container for call-to-action (CTA) buttons 
-  displayed side-by-side and center-aligned.
-*/
-.hero .cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap; 
-  /* The buttons can wrap on smaller screens for responsiveness */
-}
-
-/*
-  CTA buttons with brand colors, 
-  border-radius, and some padding.
-*/
-.hero .cta-buttons a {
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  color: #fff;
-  background-color: #3c0d99; /* Primary brand color */
-  transition: background-color 0.2s ease-in-out;
-}
-
-/*
-  Hover effect for CTA buttons.
-  Make the color slightly darker to indicate interaction.
-*/
-.hero .cta-buttons a:hover {
-  background-color: #5d16d3; /* Darker brand color on hover */
+.hero-cta .btn {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* 
 ========================
-    FEATURES SECTION
+  FEATURES SECTION
 ========================
 */
+.features-section {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+}
 
-/*
-  Features container with flexible, 
-  wrap-around items for responsiveness.
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 2rem;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-icon {
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1E2A38;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 
+========================
+  PRICING SECTION
+========================
 */
-.features {
+.pricing-section {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.pricing-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 3rem 2rem;
-  background-color: #fff;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* 
-  Each feature box is a flexible item that can expand. 
-  We set a maximum width for each so that on large 
-  screens, they maintain a nice layout.
-*/
-.feature-box {
-  flex: 1 1 300px;
-  max-width: 300px;
+.pricing-card {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  width: 300px;
+  padding: 2rem;
   text-align: center;
-  margin: 1rem;
-  padding: 1rem;
+  border: 2px solid transparent;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
-/* 
-  Feature icon. 
-  You can replace the placeholder with your own image or icon.
-*/
-.feature-box img {
-  width: 80px;
-  margin-bottom: 1rem;
+.pricing-card:hover {
+  border-color: #FF5733;
+  transform: translateY(-4px);
 }
 
-/* 
-  Feature heading (e.g., "Instant Messaging"). 
-  Slightly larger text size for emphasis.
-*/
-.feature-box h2 {
+.pricing-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #2d2d2d;
+  color: #1E2A38;
 }
 
-/* 
-  Feature description text. 
-  Use a moderate font size to keep it readable.
-*/
-.feature-box p {
-  font-size: 0.95rem;
-  line-height: 1.4;
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #FF5733;
+}
+
+.price span {
+  font-size: 1rem;
   color: #666;
 }
 
+.plan-features {
+  list-style: none;
+  text-align: left;
+  margin: 1rem 0;
+  padding: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.pricing-btn {
+  background-color: #FF5733;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.highlight-plan {
+  border-color: #FF5733;
+}
+
+.highlight-plan:hover {
+  border-color: #FF5733;
+  transform: translateY(-6px);
+}
+
 /* 
 ========================
-    TRIAL SIGN-UP SECTION
+  TESTIMONIALS SECTION
 ========================
 */
-
-/*
-  This section highlights the sign-up form
-  with a background color to differentiate it.
-*/
-.trial-section {
-  background-color: #f6f5fa;
+.testimonials-section {
   padding: 3rem 2rem;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
-/* 
-  Sign-up form heading. 
-*/
-.trial-section h2 {
-  font-size: 2rem;
+.testimonial-content {
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #333;
+  position: relative;
   margin-bottom: 1rem;
-  color: #2d2d2d;
+}
+
+.testimonial-quote p {
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-quote footer {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.trust-signal {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 /* 
-  A short description above the form.
+========================
+  FAQ SECTION
+========================
 */
-.trial-section p {
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
+.faq-section {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1E2A38;
+  font-weight: 600;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
   line-height: 1.5;
   color: #555;
 }
 
-/*
-  Centralizes form elements.
-*/
-.trial-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 400px; 
-  margin: 0 auto;   /* Center the form container */
-}
-
-/* 
-  General styling for form inputs.
-  Adjust border radius or border style as you see fit.
-*/
-.trial-form input {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* 
-  The sign-up button styling. 
-  Similar color scheme as your CTA in hero.
-*/
-.trial-form button {
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  border: none;
-  font-weight: 600;
-  color: #fff;
-  background-color: #3c0d99;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-}
-
-/* 
-  Button hover effect to ensure 
-  consistent interactive feedback.
-*/
-.trial-form button:hover {
-  background-color: #5d16d3;
-}
-
 /* 
 ========================
-    FOOTER
+  FINAL CTA SECTION
 ========================
 */
-footer {
-  margin-top: auto;           /* Push footer to bottom if needed */
-  padding: 2rem;
-  background-color: #2d2d2d;  /* Dark footer background */
-  color: #fff;
+.final-cta-section {
+  background: linear-gradient(135deg, #1E2A38, #27394F);
+  padding: 3rem 2rem;
   text-align: center;
+  color: #ffffff;
+}
+
+.final-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.final-cta-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.final-cta-btn {
+  background-color: #FF5733;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.final-cta-btn:hover {
+  background-color: #e64e2e;
 }
 
 /* 
-  Footer text styling. 
+========================
+  FOOTER STYLES
+========================
 */
-footer p {
+.site-footer {
+  background-color: #1E2A38;
+  color: #ffffff;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  text-align: center;
   font-size: 0.9rem;
 }
 
 /* 
 ========================
-    MEDIA QUERIES
+  MEDIA QUERIES
 ========================
 */
-
-/* 
-  For tablets and smaller devices,
-  make sure the layout adapts.
-*/
 @media (max-width: 768px) {
-  /* Features section: stack boxes vertically */
-  .features {
+  .pricing-container {
     flex-direction: column;
     align-items: center;
   }
   
-  /* 
-    Hero text and title can become smaller 
-    (optional) if desired.
-  */
-  .hero h1 {
+  .hero-title {
     font-size: 2rem;
+  }
+  
+  .final-cta-content h2 {
+    font-size: 1.8rem;
   }
 }
