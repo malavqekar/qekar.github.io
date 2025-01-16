@@ -24,7 +24,6 @@ body {
 /* 
   Primary brand color: #1E2A38 (Dark Blue)
   Accent color for buttons: #FF5733 (Orange) 
-  Secondary brand color or background highlights can be lighter shades of gray or blue 
 */
 
 /* 
@@ -36,7 +35,6 @@ body {
   margin: 0 auto;
 }
 
-/* Headings for each major section */
 .section-heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -68,9 +66,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* 
-  Primary (orange) button 
-*/
+/* Primary (orange) button */
 .primary-btn {
   background-color: #FF5733;
   color: #ffffff;
@@ -80,9 +76,7 @@ body {
   background-color: #e64e2e;
 }
 
-/* 
-  Secondary (outline or inverse) button 
-*/
+/* Secondary (outline or inverse) button */
 .secondary-btn {
   background-color: transparent;
   border: 2px solid #FF5733;
@@ -117,7 +111,6 @@ body {
   color: #1E2A38;
 }
 
-/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -141,6 +134,7 @@ body {
 ========================
 */
 .hero {
+  /* Background gradient replaced for a more modern look, can adjust as needed */
   background: linear-gradient(135deg, #1E2A38 60%, #27394F);
   color: #ffffff;
   padding: 4rem 2rem;
