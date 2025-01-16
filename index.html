@@ -3,26 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
+    <title>Qekar - Outsmart Your Competitors</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Landing Page</h1>
-        <p>Your tagline goes here!</p>
+    <header class="header">
+        <div class="container">
+            <h1>Outsmart Your Competitors with Qekar</h1>
+            <p>Automated insights to monitor, anticipate, and grow smarter in your market.</p>
+            <button class="btn-primary" onclick="scrollToSection('waitlist')">Join the Waitlist</button>
+        </div>
     </header>
+    
     <main>
-        <section>
-            <h2>About Us</h2>
-            <p>This is where you describe your page content.</p>
+        <section class="section benefits">
+            <div class="container">
+                <h2>Why Choose Qekar?</h2>
+                <ul class="benefits-list">
+                    <li><strong>Save Time:</strong> Automate competitor tracking in minutes.</li>
+                    <li><strong>Gain Insights:</strong> See what’s working for your competitors.</li>
+                    <li><strong>Make Better Decisions:</strong> Data-backed insights to guide your strategy.</li>
+                </ul>
+            </div>
         </section>
-        <section>
-            <h2>Contact</h2>
-            <p>Email: contact@example.com</p>
+
+        <section class="section use-cases">
+            <div class="container">
+                <h2>Use Cases</h2>
+                <div class="use-case-grid">
+                    <div class="use-case">
+                        <h3>For Startups</h3>
+                        <p>Track competitors' pricing, features, and updates to stay ahead.</p>
+                    </div>
+                    <div class="use-case">
+                        <h3>For Product Teams</h3>
+                        <p>Get insights into competitor roadmaps, feature launches, and FAQs.</p>
+                    </div>
+                    <div class="use-case">
+                        <h3>For Marketers</h3>
+                        <p>Analyze competitor campaigns to refine your own marketing efforts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features">
+            <div class="container">
+                <h2>Features</h2>
+                <ul class="features-list">
+                    <li>Real-time competitor monitoring</li>
+                    <li>Weekly automated reports</li>
+                    <li>Customizable insights</li>
+                    <li>Integrations with Slack, Email, and more</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section pricing">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-cards">
+                    <div class="pricing-card">
+                        <h3>Starter Plan</h3>
+                        <p>$25/month</p>
+                        <p>Basic insights for 1 competitor</p>
+                        <button class="btn-secondary" onclick="scrollToSection('waitlist')">Join Waitlist</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Pro Plan</h3>
+                        <p>$75/month</p>
+                        <p>Detailed insights for up to 5 competitors</p>
+                        <button class="btn-secondary" onclick="scrollToSection('waitlist')">Join Waitlist</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="waitlist" class="section join-waitlist">
+            <div class="container">
+                <h2>Join the Waitlist</h2>
+                <p>Be the first to experience the future of competitive intelligence.</p>
+                <form class="waitlist-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Join Now</button>
+                </form>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 My Landing Page</p>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Qekar. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+</script>
 </html>
