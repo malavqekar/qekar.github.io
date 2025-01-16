@@ -1,209 +1,326 @@
-/* General Reset */
+/* 
+========================
+    GLOBAL STYLES
+========================
+*/
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* 
+  Use the "Inter" font (or your preferred font).
+  Fallbacks are sans-serif for browsers that don't support Inter.
+*/
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    background-color: #f9f9f9;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* You can use a neutral background color or white. */
+  background-color: #ffffff;
 }
 
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+/* 
+========================
+    NAVIGATION
+========================
+*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;          /* Nav background color */
+  border-bottom: 1px solid #ddd;   /* Subtle bottom border for separation */
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    background: #1a1f36;
-    color: white;
+/* 
+  The brand logo text styling. You can replace 
+  this text with an <img> logo as needed.
+*/
+nav .logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #3c0d99; /* Example brand color */
+  text-decoration: none;
 }
 
-.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ff5a5f;
+/*
+  Navigation link container. 
+  Left margin for each link for spacing.
+*/
+nav .nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #666;   /* Navigation link color */
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    background: #ff5a5f;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+/*
+  Navigation link hover states. 
+  Adjust the color for your brand.
+*/
+nav .nav-links a:hover {
+  color: #3c0d99; 
 }
 
-/* Hero Section */
+/* 
+========================
+    HERO SECTION
+========================
+*/
+
+/*
+  A centered hero section with a background color 
+  or image. Adjust padding for space.
+*/
 .hero {
-    text-align: center;
-    padding: 5rem 1rem;
-    background: #1a1f36;
-    color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #f6f5fa; /* Light brand background color */
 }
 
+/* Main hero heading */
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;    /* Large, attention-grabbing size */
+  margin-bottom: 1rem;
+  color: #2d2d2d;       /* Dark text color for contrast */
 }
 
+/* Hero paragraph or subtitle */
 .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;  /* Center text with auto margins */
+  line-height: 1.5;          /* Improve readability */
+  color: #555;               /* Slightly softer text color */
 }
 
-.cta-buttons a {
-    margin: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 5px;
+/*
+  A container for call-to-action (CTA) buttons 
+  displayed side-by-side and center-aligned.
+*/
+.hero .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; 
+  /* The buttons can wrap on smaller screens for responsiveness */
 }
 
-.cta-buttons .btn-primary {
-    background: #ff5a5f;
-    color: white;
+/*
+  CTA buttons with brand colors, 
+  border-radius, and some padding.
+*/
+.hero .cta-buttons a {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3c0d99; /* Primary brand color */
+  transition: background-color 0.2s ease-in-out;
 }
 
-.cta-buttons .btn-secondary {
-    border: 2px solid white;
-    color: white;
-    background: transparent;
+/*
+  Hover effect for CTA buttons.
+  Make the color slightly darker to indicate interaction.
+*/
+.hero .cta-buttons a:hover {
+  background-color: #5d16d3; /* Darker brand color on hover */
 }
 
-/* Section Titles */
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
+/* 
+========================
+    FEATURES SECTION
+========================
+*/
 
-/* Benefits Section */
-.benefits {
-    padding: 3rem 1rem;
-    background: white;
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.benefits-grid .benefit h3 {
-    font-size: 1.5rem;
-    color: #ff5a5f;
-}
-
-/* Use Cases Section */
-.use-cases {
-    padding: 3rem 1rem;
-    background: #f3f3f3;
-}
-
-.use-cases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Features Section */
+/*
+  Features container with flexible, 
+  wrap-around items for responsiveness.
+*/
 .features {
-    padding: 3rem 1rem;
-    background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3rem 2rem;
+  background-color: #fff;
 }
 
-.features ul {
-    list-style-type: none;
+/* 
+  Each feature box is a flexible item that can expand. 
+  We set a maximum width for each so that on large 
+  screens, they maintain a nice layout.
+*/
+.feature-box {
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
 }
 
-.features li {
-    margin: 1rem 0;
-    font-size: 1.2rem;
+/* 
+  Feature icon. 
+  You can replace the placeholder with your own image or icon.
+*/
+.feature-box img {
+  width: 80px;
+  margin-bottom: 1rem;
 }
 
-/* Pricing Section */
-.pricing {
-    padding: 3rem 1rem;
-    background: #f3f3f3;
+/* 
+  Feature heading (e.g., "Instant Messaging"). 
+  Slightly larger text size for emphasis.
+*/
+.feature-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
 }
 
-.pricing-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+/* 
+  Feature description text. 
+  Use a moderate font size to keep it readable.
+*/
+.feature-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #666;
 }
 
-.pricing-card {
-    text-align: center;
-    background: white;
-    border: 1px solid #ddd;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* 
+========================
+    TRIAL SIGN-UP SECTION
+========================
+*/
+
+/*
+  This section highlights the sign-up form
+  with a background color to differentiate it.
+*/
+.trial-section {
+  background-color: #f6f5fa;
+  padding: 3rem 2rem;
+  text-align: center;
 }
 
-.pricing-card h3 {
-    color: #333;
-    margin-bottom: 1rem;
+/* 
+  Sign-up form heading. 
+*/
+.trial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
 }
 
-.pricing-card p {
-    font-size: 1.25rem;
-    color: #666;
-    margin-bottom: 1rem;
+/* 
+  A short description above the form.
+*/
+.trial-section p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.5;
+  color: #555;
 }
 
-.pricing-card a {
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    background: #ff5a5f;
-    color: white;
-    border-radius: 5px;
+/*
+  Centralizes form elements.
+*/
+.trial-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px; 
+  margin: 0 auto;   /* Center the form container */
 }
 
-/* Waitlist Section */
-.waitlist {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #1a1f36;
-    color: white;
+/* 
+  General styling for form inputs.
+  Adjust border radius or border style as you see fit.
+*/
+.trial-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.waitlist form {
-    margin-top: 1rem;
+/* 
+  The sign-up button styling. 
+  Similar color scheme as your CTA in hero.
+*/
+.trial-form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3c0d99;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.waitlist input {
-    padding: 0.75rem;
-    margin-right: 0.5rem;
-    border: none;
-    border-radius: 5px;
+/* 
+  Button hover effect to ensure 
+  consistent interactive feedback.
+*/
+.trial-form button:hover {
+  background-color: #5d16d3;
 }
 
-.waitlist button {
-    padding: 0.75rem 1.5rem;
-    background: #ff5a5f;
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* 
+========================
+    FOOTER
+========================
+*/
+footer {
+  margin-top: auto;           /* Push footer to bottom if needed */
+  padding: 2rem;
+  background-color: #2d2d2d;  /* Dark footer background */
+  color: #fff;
+  text-align: center;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
-    font-size: 0.875rem;
+/* 
+  Footer text styling. 
+*/
+footer p {
+  font-size: 0.9rem;
+}
+
+/* 
+========================
+    MEDIA QUERIES
+========================
+*/
+
+/* 
+  For tablets and smaller devices,
+  make sure the layout adapts.
+*/
+@media (max-width: 768px) {
+  /* Features section: stack boxes vertically */
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* 
+    Hero text and title can become smaller 
+    (optional) if desired.
+  */
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
