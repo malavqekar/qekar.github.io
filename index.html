@@ -2,90 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Qekar – Start Your Free Trial</title>
-  
-  <!-- Example Google Fonts link; change to your preferred font if desired -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
+  <meta name="description" content="Qekar – Stay ahead of your competitors with automated insights" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qekar – Automated Competitor Insights</title>
+
+  <!-- Google Fonts (Example: Poppins) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Link to your CSS file -->
+  
+  <!-- Link to External CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
-    <a href="#" class="logo">Qekar</a>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#trial">Free Trial</a>
-      <a href="#contact">Contact</a>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Qekar</div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1>Try Qekar for Free</h1>
-    <p>
-      The fastest way to keep your team connected, productive, and organized. 
-      Unlock seamless collaboration, real-time messaging, file sharing, and more — all in Qekar.
-    </p>
-    <div class="cta-buttons">
-      <a href="#trial">Start Free Trial</a>
-      <a href="#features">Explore Features</a>
+  <header class="hero" id="hero">
+    <div class="container hero-content">
+      <h1 class="hero-title">Stay One Step Ahead of Your Competitors.</h1>
+      <p class="hero-subtitle">
+        Monitor, analyze, and act on your competitors’ moves with ease.
+      </p>
+      <div class="hero-cta">
+        <a href="#signup" class="btn primary-btn">Join Waitlist</a>
+        <a href="#how-it-works" class="btn secondary-btn">How Does It Work?</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features & Benefits Section -->
+  <section class="features-section" id="features">
+    <div class="container section-heading">
+      <h2>Features & Benefits</h2>
+      <p>Empower your team with real-time competitor insights</p>
+    </div>
+
+    <div class="container features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <!-- Simple inline SVG icon (replace with your own icon) -->
+        <div class="feature-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
+            <path d="M11 17h2v-2h-2v2zm1-15c-5.52 0-10 4.48-10 10s4.48 
+                     10 10 10 10-4.48 10-10-4.48-10-10-10zm1 
+                     14h-2v-6h2v6zm0-8h-2V7h2v1z"/>
+          </svg>
+        </div>
+        <h3>Automated Competitor Tracking</h3>
+        <p>
+          Track your competitors’ product launches, pricing changes, 
+          and updates in real-time.
+        </p>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
+            <path d="M3 3v18h8v-18h-8zm10 0v8h8v-8h-8zm0 10v8h8v-8h-8z"/>
+          </svg>
+        </div>
+        <h3>Actionable Insights</h3>
+        <p>
+          Get easy-to-understand reports to help make smarter business decisions.
+        </p>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
+            <path d="M12 22c5.421 0 10-4.579 10-10s-4.579-10-10-10-10 
+                     4.579-10 10 4.579 10 10 10zm-1-9h2v5h-2v-5zm0-8h2v5h-2v-5z"/>
+          </svg>
+        </div>
+        <h3>Customizable Alerts</h3>
+        <p>
+          Be notified about critical changes instantly in your inbox or SMS.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
+            <path d="M17 13h-5v6h-2v-6H5v-2h5V5h2v6h5v2z"/>
+          </svg>
+        </div>
+        <h3>Easy Integration</h3>
+        <p>
+          Seamlessly connect Qekar with your existing tools like Slack and Zapier.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="feature-box">
-      <img
-        src="https://via.placeholder.com/80"
-        alt="Feature 1"
-      />
-      <h2>Instant Messaging</h2>
-      <p>
-        Connect with your team instantly through organized channels, direct messages, or group chats.
-      </p>
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="container section-heading">
+      <h2>Choose Your Plan</h2>
+      <p>No credit card required for sign-up. Cancel anytime.</p>
     </div>
-    <div class="feature-box">
-      <img
-        src="https://via.placeholder.com/80"
-        alt="Feature 2"
-      />
-      <h2>File Sharing</h2>
-      <p>
-        Easily share documents, images, and files in a secure environment, directly within Qekar.
-      </p>
-    </div>
-    <div class="feature-box">
-      <img
-        src="https://via.placeholder.com/80"
-        alt="Feature 3"
-      />
-      <h2>Custom Workflows</h2>
-      <p>
-        Automate routine tasks with drag-and-drop workflows to simplify and accelerate your processes.
-      </p>
+    <div class="container pricing-container">
+      <!-- Starter Plan -->
+      <div class="pricing-card">
+        <h3>Starter Plan</h3>
+        <p class="price">$25<span>/month</span></p>
+        <ul class="plan-features">
+          <li>Basic insights for one competitor</li>
+          <li>Real-time alerts</li>
+          <li>Email support</li>
+        </ul>
+        <a href="#signup" class="btn pricing-btn">Get Started</a>
+      </div>
+      <!-- Pro Plan -->
+      <div class="pricing-card highlight-plan">
+        <h3>Pro Plan</h3>
+        <p class="price">$75<span>/month</span></p>
+        <ul class="plan-features">
+          <li>Detailed weekly insights for up to 5 competitors</li>
+          <li>Priority alerts & notifications</li>
+          <li>24/7 phone & email support</li>
+        </ul>
+        <a href="#signup" class="btn pricing-btn">Get Started</a>
+      </div>
     </div>
   </section>
 
-  <!-- Sign-up Form -->
-  <section id="trial" class="trial-section">
-    <h2>Get Started with Your Free Trial</h2>
-    <p>Sign up now and get immediate access to Qekar for your entire team.</p>
-    <form class="trial-form">
-      <input type="email" placeholder="Your work email" required/>
-      <input type="text" placeholder="Your full name" required/>
-      <button type="submit">Start Free Trial</button>
-    </form>
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container section-heading">
+      <h2>What Our Customers Say</h2>
+      <p class="trust-signal">Trusted by 500+ SaaS companies worldwide</p>
+    </div>
+    <div class="container testimonial-content">
+      <blockquote class="testimonial-quote">
+        <p>
+          “Qekar has completely transformed the way we approach our competitors.”
+        </p>
+        <footer>— Alex, SaaS Founder</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container section-heading">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="container faq-container">
+      <div class="faq-item">
+        <h4>How does Qekar collect competitor data?</h4>
+        <p>
+          We use proprietary data scraping, public APIs, and strategic partnerships 
+          to ensure accurate, real-time tracking of competitor changes.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I upgrade or downgrade my plan later?</h4>
+        <p>
+          Absolutely. You can switch between Starter and Pro at any time within your account settings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="final-cta-section" id="signup">
+    <div class="container final-cta-content">
+      <h2>Join Qekar and Outsmart Your Competition Today</h2>
+      <a href="#" class="btn final-cta-btn">Sign Up Now</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>© 2025 Qekar Inc. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 Qekar Inc. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
