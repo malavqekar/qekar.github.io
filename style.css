@@ -1,425 +1,264 @@
-/* 
-  GLOBAL RESETS & VARIABLES
-*/
+/* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  /* Enables smooth scrolling for anchor links */
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #1E2A38; /* Dark blue text color */
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* 
-  Primary brand color: #1E2A38 (Dark Blue)
-  Accent color for buttons: #FF5733 (Orange) 
-*/
-
-/* 
-  COMMON UTILITY CLASSES & STYLES 
-*/
+/* Container */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.section-heading h2 {
-  font-size: 2rem;
-  color: #1E2A38;
-  margin-bottom: 0.5rem;
-}
-
-.section-heading p {
-  font-size: 1rem;
-  color: #555; 
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 4px;
-  text-decoration: none;
-  text-align: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Primary (orange) button */
-.primary-btn {
-  background-color: #FF5733;
-  color: #ffffff;
-}
-
-.primary-btn:hover {
-  background-color: #e64e2e;
-}
-
-/* Secondary (outline or inverse) button */
-.secondary-btn {
-  background-color: transparent;
-  border: 2px solid #FF5733;
-  color: #FF5733;
-}
-
-.secondary-btn:hover {
-  background-color: #FF5733;
-  color: #ffffff;
-}
-
-/* 
-========================
-    NAVBAR STYLES
-========================
-*/
+/* Navbar */
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1E2A38;
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: #ff5a5f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-links a {
-  color: #1E2A38;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: #FF5733;
-}
-
-/* 
-========================
-    HERO SECTION
-========================
-*/
+/* Hero Section */
 .hero {
-  /* Background gradient replaced for a more modern look, can adjust as needed */
-  background: linear-gradient(135deg, #1E2A38 60%, #27394F);
-  color: #ffffff;
-  padding: 4rem 2rem;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0;
+    background: #f4f4f9;
 }
 
 .hero-content {
-  max-width: 700px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #f0f0f0;
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #666;
 }
 
-.hero-cta .btn {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+.cta-buttons a {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-/* 
-========================
-  FEATURES SECTION
-========================
-*/
-.features-section {
-  padding: 3rem 2rem;
-  background-color: #f9f9f9;
+.cta-buttons .btn-primary {
+    background: #ff5a5f;
+    color: white;
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-gap: 2rem;
+.cta-buttons .btn-secondary {
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+    background: transparent;
 }
 
-.feature-card {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
+/* Benefits Section */
+.benefits-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
-.feature-card:hover {
-  transform: translateY(-4px);
+.benefits-grid .benefit img {
+    width: 60px;
+    margin-bottom: 1rem;
 }
 
-.feature-icon {
-  margin-bottom: 1rem;
+.benefits-grid .benefit h3 {
+    font-size: 1.5rem;
+    color: #333;
 }
 
-.feature-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #1E2A38;
+/* How It Works Section */
+.steps {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    text-align: center;
 }
 
-.feature-card p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-/* 
-========================
-  PRICING SECTION
-========================
-*/
-.pricing-section {
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-}
-
-.pricing-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+/* Pricing Section */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .pricing-card {
-  background-color: #f9f9f9;
-  border-radius: 6px;
-  width: 300px;
-  padding: 2rem;
-  text-align: center;
-  border: 2px solid transparent;
-  transition: border-color 0.2s, transform 0.2s;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.pricing-card:hover {
-  border-color: #FF5733;
-  transform: translateY(-4px);
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-.pricing-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #1E2A38;
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.price {
-  font-size: 2rem;
-  margin: 1rem 0;
-  color: #FF5733;
-}
-
-.price span {
-  font-size: 1rem;
-  color: #666;
-}
-
-.plan-features {
-  list-style: none;
-  text-align: left;
-  margin: 1rem 0;
-  padding: 0;
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.pricing-btn {
-  background-color: #FF5733;
-  color: #fff;
-  margin-top: 1rem;
-}
-
-.highlight-plan {
-  border-color: #FF5733;
-}
-
-.highlight-plan:hover {
-  border-color: #FF5733;
-  transform: translateY(-6px);
-}
-
-/* 
-========================
-  TESTIMONIALS SECTION
-========================
-*/
-.testimonials-section {
-  padding: 3rem 2rem;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.testimonial-content {
-  max-width: 600px;
-  margin: 2rem auto 0 auto;
-}
-
-.testimonial-quote {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #333;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.testimonial-quote p {
-  margin-bottom: 0.5rem;
-}
-
-.testimonial-quote footer {
-  text-align: right;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.trust-signal {
-  margin-top: 0.5rem;
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* 
-========================
-  FAQ SECTION
-========================
-*/
-.faq-section {
-  padding: 3rem 2rem;
-  background-color: #ffffff;
-}
-
-.faq-container {
-  max-width: 800px;
-  margin: 2rem auto;
-}
-
-.faq-item {
-  margin-bottom: 1.5rem;
-}
-
-.faq-item h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #1E2A38;
-  font-weight: 600;
-}
-
-.faq-item p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-}
-
-/* 
-========================
-  FINAL CTA SECTION
-========================
-*/
-.final-cta-section {
-  background: linear-gradient(135deg, #1E2A38, #27394F);
-  padding: 3rem 2rem;
-  text-align: center;
-  color: #ffffff;
-}
-
-.final-cta-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.final-cta-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.final-cta-btn {
-  background-color: #FF5733;
-  color: #fff;
-  margin-top: 1rem;
-}
-
-.final-cta-btn:hover {
-  background-color: #e64e2e;
-}
-
-/* 
-========================
-  FOOTER STYLES
-========================
-*/
-.site-footer {
-  background-color: #1E2A38;
-  color: #ffffff;
-  padding: 2rem 0;
-  margin-top: auto;
-}
-
-.footer-content {
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/* 
-========================
-  MEDIA QUERIES
-========================
-*/
-@media (max-width: 768px) {
-  .pricing-container {
-    flex-direction: column;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .final-cta-content h2 {
-    font-size: 1.8rem;
-  }
+    padding: 1rem 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    background: #ff5a5f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0;
+    background: #f4f4f9;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.cta-buttons a {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-buttons .btn-primary {
+    background: #ff5a5f;
+    color: white;
+}
+
+.cta-buttons .btn-secondary {
+    border: 2px solid #ff5a5f;
+    color: #ff5a5f;
+    background: transparent;
+}
+
+/* Benefits Section */
+.benefits-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.benefits-grid .benefit img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+.benefits-grid .benefit h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* How It Works Section */
+.steps {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
