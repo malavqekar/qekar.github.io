@@ -1,199 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Qekar – Stay ahead of your competitors with automated insights" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qekar – Automated Competitor Insights</title>
-
-  <!-- Google Fonts (Example: Poppins) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  
-  <!-- Link to External CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qekar - Stay Ahead of Your Competitors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <div class="logo">Qekar</div>
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero" id="hero">
-    <div class="container hero-content">
-      <h1 class="hero-title">Stay One Step Ahead of Your Competitors.</h1>
-      <p class="hero-subtitle">
-        Monitor, analyze, and act on your competitors’ moves with ease.
-      </p>
-      <div class="hero-cta">
-        <!-- Updated link below: now points to #features instead of #how-it-works -->
-        <a href="#signup" class="btn primary-btn">Join Waitlist</a>
-        <a href="#features" class="btn secondary-btn">How Does It Work?</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Features & Benefits Section -->
-  <section class="features-section" id="features">
-    <div class="container section-heading">
-      <h2>Features & Benefits</h2>
-      <p>Empower your team with real-time competitor insights</p>
-    </div>
-
-    <div class="container features-grid">
-      <!-- Feature 1 -->
-      <div class="feature-card">
-        <!-- Simple inline SVG icon (replace with your own icon) -->
-        <div class="feature-icon">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
-            <path d="M11 17h2v-2h-2v2zm1-15c-5.52 0-10 4.48-10 10s4.48 
-                     10 10 10 10-4.48 10-10-4.48-10-10-10zm1 
-                     14h-2v-6h2v6zm0-8h-2V7h2v1z"/>
-          </svg>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">Qekar</div>
+            <a href="#waitlist" class="btn-primary">Get Started</a>
         </div>
-        <h3>Automated Competitor Tracking</h3>
-        <p>
-          Track your competitors’ product launches, pricing changes, 
-          and updates in real-time.
-        </p>
-      </div>
-      
-      <!-- Feature 2 -->
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
-            <path d="M3 3v18h8v-18h-8zm10 0v8h8v-8h-8zm0 10v8h8v-8h-8z"/>
-          </svg>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="text">
+                <h1>Stay Ahead of Your Competitors</h1>
+                <p>Discover actionable insights to outsmart your competitors effortlessly. Designed for SaaS startups, agencies, and e-commerce brands.</p>
+                <div class="cta-buttons">
+                    <a href="#waitlist" class="btn-primary">Join Waitlist</a>
+                    <a href="#how-it-works" class="btn-secondary">How It Works</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-image.png" alt="Hero Illustration">
+            </div>
         </div>
-        <h3>Actionable Insights</h3>
-        <p>
-          Get easy-to-understand reports to help make smarter business decisions.
-        </p>
-      </div>
-      
-      <!-- Feature 3 -->
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
-            <path d="M12 22c5.421 0 10-4.579 10-10s-4.579-10-10-10-10 
-                     4.579-10 10 4.579 10 10 10zm-1-9h2v5h-2v-5zm0-8h2v5h-2v-5z"/>
-          </svg>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Why Choose Qekar?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <img src="assets/images/icon1.svg" alt="Save Time Icon">
+                    <h3>Save Time</h3>
+                    <p>Automate competitor monitoring with minimal effort.</p>
+                </div>
+                <div class="benefit">
+                    <img src="assets/images/icon2.svg" alt="Gain Insights Icon">
+                    <h3>Gain Insights</h3>
+                    <p>Get data-backed strategies to guide your decisions.</p>
+                </div>
+                <div class="benefit">
+                    <img src="assets/images/icon3.svg" alt="Act Smarter Icon">
+                    <h3>Act Smarter</h3>
+                    <p>Stay ahead with real-time competitor updates.</p>
+                </div>
+            </div>
         </div>
-        <h3>Customizable Alerts</h3>
-        <p>
-          Be notified about critical changes instantly in your inbox or SMS.
-        </p>
-      </div>
+    </section>
 
-      <!-- Feature 4 -->
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="#FF5733">
-            <path d="M17 13h-5v6h-2v-6H5v-2h5V5h2v6h5v2z"/>
-          </svg>
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Add Competitors</h3>
+                    <p>Select the competitors you want to track and monitor.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Analyze Data</h3>
+                    <p>Receive detailed insights and trends from your competitors' activities.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Take Action</h3>
+                    <p>Optimize your strategy based on real-time data.</p>
+                </div>
+            </div>
         </div>
-        <h3>Easy Integration</h3>
-        <p>
-          Seamlessly connect Qekar with your existing tools like Slack and Zapier.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pricing Section -->
-  <section class="pricing-section" id="pricing">
-    <div class="container section-heading">
-      <h2>Choose Your Plan</h2>
-      <p>No credit card required for sign-up. Cancel anytime.</p>
-    </div>
-    <div class="container pricing-container">
-      <!-- Starter Plan -->
-      <div class="pricing-card">
-        <h3>Starter Plan</h3>
-        <p class="price">$25<span>/month</span></p>
-        <ul class="plan-features">
-          <li>Basic insights for one competitor</li>
-          <li>Real-time alerts</li>
-          <li>Email support</li>
-        </ul>
-        <a href="#signup" class="btn pricing-btn">Get Started</a>
-      </div>
-      <!-- Pro Plan -->
-      <div class="pricing-card highlight-plan">
-        <h3>Pro Plan</h3>
-        <p class="price">$75<span>/month</span></p>
-        <ul class="plan-features">
-          <li>Detailed weekly insights for up to 5 competitors</li>
-          <li>Priority alerts & notifications</li>
-          <li>24/7 phone & email support</li>
-        </ul>
-        <a href="#signup" class="btn pricing-btn">Get Started</a>
-      </div>
-    </div>
-  </section>
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter Plan</h3>
+                    <p>$25/month</p>
+                    <p>Basic insights for 1 competitor</p>
+                    <a href="#waitlist" class="btn-primary">Join Waitlist</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro Plan</h3>
+                    <p>$75/month</p>
+                    <p>Detailed insights for up to 5 competitors</p>
+                    <a href="#waitlist" class="btn-primary">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials-section" id="testimonials">
-    <div class="container section-heading">
-      <h2>What Our Customers Say</h2>
-      <p class="trust-signal">Trusted by 500+ SaaS companies worldwide</p>
-    </div>
-    <div class="container testimonial-content">
-      <blockquote class="testimonial-quote">
-        <p>
-          “Qekar has completely transformed the way we approach our competitors.”
-        </p>
-        <footer>— Alex, SaaS Founder</footer>
-      </blockquote>
-    </div>
-  </section>
+    <!-- Call-to-Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Get Started Today</h2>
+            <p>Join the waitlist to be the first to experience Qekar's powerful insights.</p>
+            <form class="waitlist-form" id="waitlist">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn-primary">Join Waitlist</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section" id="faq">
-    <div class="container section-heading">
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="container faq-container">
-      <div class="faq-item">
-        <h4>How does Qekar collect competitor data?</h4>
-        <p>
-          We use proprietary data scraping, public APIs, and strategic partnerships 
-          to ensure accurate, real-time tracking of competitor changes.
-        </p>
-      </div>
-      <div class="faq-item">
-        <h4>Can I upgrade or downgrade my plan later?</h4>
-        <p>
-          Absolutely. You can switch between Starter and Pro at any time within your account settings.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call-to-Action Section -->
-  <section class="final-cta-section" id="signup">
-    <div class="container final-cta-content">
-      <h2>Join Qekar and Outsmart Your Competition Today</h2>
-      <a href="#" class="btn final-cta-btn">Sign Up Now</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <p>© 2025 Qekar Inc. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Qekar. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
